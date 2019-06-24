@@ -1,0 +1,1 @@
+java -jar -DserverPort=7979 -DbindAddress=0.0.0.0 standalone-hystrix-dashboard-1.5.3-all.jar
