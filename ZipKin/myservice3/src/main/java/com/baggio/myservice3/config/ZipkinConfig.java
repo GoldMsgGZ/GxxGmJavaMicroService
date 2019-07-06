@@ -7,11 +7,16 @@ import com.github.kristofa.brave.SpanCollector;
 import com.github.kristofa.brave.http.DefaultSpanNameProvider;
 import com.github.kristofa.brave.http.HttpSpanCollector;
 import com.github.kristofa.brave.servlet.BraveServletFilter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ZipkinConfig {
+    // zipkin地址
+    @Value("${zipkin.url}")
+    private String zipkinUrl;
+
     @Bean
     public SpanCollector spanCollector() {
         HttpSpanCollector.Config spanConfig = HttpSpanCollector.Config.builder()
@@ -22,7 +27,7 @@ public class ZipkinConfig {
                 .build();
 
         // 这里的URL地址应该就是ZipKin的地址，可以考虑做成配置项
-        return HttpSpanCollector.create("http://10.211.55.13:9411", spanConfig, new EmptySpanCollectorMetricsHandler());
+        return HttpSpanCollector.create(zipkinUrl, spanConfig, new EmptySpanCollectorMetricsHandler());
     }
 
     @Bean

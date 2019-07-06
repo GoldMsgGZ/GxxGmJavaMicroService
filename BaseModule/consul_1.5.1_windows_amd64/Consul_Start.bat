@@ -1,0 +1,1 @@
+"D:\MicroService\consul_1.5.1_windows_amd64\consul.exe" agent -dev
