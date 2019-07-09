@@ -1,4 +1,4 @@
-package com.baggio.dubboserver;
+package com.baggio.dubbo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package com.baggio.dubboclient.controller;
+package com.baggio.dubbo.controller;
 
-import com.baggio.dubboclient.service.ComputeService;
+import com.baggio.dubbo.service.ComputeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,11 +8,11 @@
     <!-- 消费方应用名 -->
     <dubbo:application name="consumer"  />
 
-    <!-- 注册中心服务地址 -->
+    <!-- 注册中心服务地址，这里采用连接到Zookeeper方式获取服务 -->
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
 
     <!-- 引用ComputeService服务-->
-    <dubbo:reference id="computeService" interface="com.baggio.dubboclient.service.ComputeService"
+    <dubbo:reference id="computeService" interface="com.baggio.dubbo.service.ComputeService"
                      check="false" version="1.0" url="" registry="zookeeper" protocol="dubbo" timeout="15000"/>
 
 </beans>

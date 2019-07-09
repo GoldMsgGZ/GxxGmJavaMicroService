@@ -1,6 +1,6 @@
-package com.baggio.dubboserver.service.impl;
+package com.baggio.dubbo.service.impl;
 
-import com.baggio.dubboserver.service.ComputeService;
+import com.baggio.dubbo.service.ComputeService;
 
 public class ComputeServiceImpl implements ComputeService {
     @Override

@@ -15,10 +15,10 @@
     <dubbo:protocol name="dubbo" port="30001" dispather="all" threadpool="cached" threads="5000"/>
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.baggio.dubboserver.service.ComputeService" ref="computeService"
+    <dubbo:service interface="com.baggio.dubbo.service.ComputeService" ref="computeService"
                    version="1.0" registry="zookeeper" owner="shp"/>
 
     <!-- 具体服务接口的实现 -->
-    <bean id="computeService" class="com.baggio.dubboserver.service.impl.ComputeServiceImpl" />
+    <bean id="computeService" class="com.baggio.dubbo.service.impl.ComputeServiceImpl" />
 
 </beans>
